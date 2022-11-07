@@ -1,4 +1,4 @@
-// Print each character of a string vertically
+// Print each character of a string in reverse
 
 #include <cs50.h>
 #include <ctype.h>
@@ -11,7 +11,7 @@ int main(void)
     string s = get_string("Input: ");
 
     // Loop through each character (strlen() returns the string length)
-    for (int i = 0; i < strlen(s); i++)
+    for (int i = strlen(s) - 1; i >= 0; i--)
     {
         // Print each char as an uppercase letter
         printf("%c", toupper(s[i]));
