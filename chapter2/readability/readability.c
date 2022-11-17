@@ -24,8 +24,11 @@ int count_letters(string s)
     // Initialize a counter
 
     // Loop through the text
+    for(int i = 0; i < strlen(s))
         // If a letter (isalpha may be helpful here)
+        if (isalpha(s[i]))
             // Add 1 to the counter
+            counter++;
 
     // Return the value of the counter/the number of letters
 }
