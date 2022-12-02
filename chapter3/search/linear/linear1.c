@@ -4,16 +4,17 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
     // An array of numbers
     string names[] = {"Tyler", "Will", "Matt", "John", "Aiden"};
 
-    // Search for "Tyler"
+    // Search for "Foster"
     for (int i = 0; i < 5; i++)
     {
-        if (names[i] == "Tyler")
+        if (strcmp(names[i], "Foster") == 0)
         {
             printf("Found at index %i\n", i);
             return 0;
