@@ -8,7 +8,7 @@
 
 int main(void)
 {
-    // An array of numbers
+    // An array of names
     string names[] = {"Tyler", "Will", "Matt", "John", "Aiden"};
 
     // An array of phone numbers
