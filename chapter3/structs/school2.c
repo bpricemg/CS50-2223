@@ -5,13 +5,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
-
-typedef struct
-{
-    string name;
-    float gpa;
-}
-student;
+#include "student.h" //Quotes for header files in the local director
 
 int main(void)
 {
@@ -31,9 +25,16 @@ int main(void)
         printf("\n");
     }
 
-    // Print all students' name and gpa
-    for (int i = 0; i < enrollment; i++)
+    // Save to disk
+    FILE *file = fopen("gpa.csv", "w");
+
+    if(file)
     {
-        printf("%s has a gpa of %0.3f\n", school[i].name, school[i].gpa);
+        for (int i = 0; i < enrollment; i++)
+        {
+            fprintf(file, "%s, %f\n", school[i].name, school[i].gpa);
+        }
+
+        fclose(file);
     }
 }

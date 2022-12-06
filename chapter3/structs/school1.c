@@ -5,13 +5,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
-
-typedef struct
-{
-    string name;
-    float gpa;
-}
-student;
+#include "student.h" //Quotes for header files in the local director
 
 int main(void)
 {
