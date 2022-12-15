@@ -141,7 +141,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     // Look for a candidate called name (linear search for name in candidates[])
         // If candidate found
-            // Update preferences
+            // Update preferences[][]
             // Return true
     // Otherwsie, candidate not found
     return false;
@@ -151,6 +151,12 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    // For each row/voter in preferences[][]
+        // For each col/candidate in preferences[][]
+            // If candidate vote in preferences[][] is not elimated in candidates[]
+                // Update vote count in candidates[]
+                // break out of the most recent for loop
+
     return;
 }
 
