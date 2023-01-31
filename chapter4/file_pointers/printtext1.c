@@ -13,14 +13,12 @@ int main(void)
         return 1;
     }
 
-    // Read the .txt file
-    char ch = fgetc(txt);
-
-    // Print every character
-    while (ch != EOF)
+    // For every character in the file
+    // Note* saving the char as an int for a reliable EOF comparison
+    for (int ch = fgetc(txt); ch != EOF; ch = fgetc(txt))
     {
+        // Print the character
         printf("%c", ch);
-        ch = fgetc(txt); // Moves buffer to next character
     }
 
     printf("\n");
