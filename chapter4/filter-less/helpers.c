@@ -34,5 +34,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Create a temp image (of type RGBTRIPLE)
+
+    // Loop through each pixel of the original image
+        // Find the average of each RGB within 1 row and 1 column of the pixel
+        // Save values in temp image
+
+    // Copy each pixel from temp to original
+
     return;
 }
