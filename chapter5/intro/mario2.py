@@ -4,10 +4,11 @@ def main():
     # Get the height from the user
     n = get_height()
 
-    # Print block horizontally
+    # Print a square of blocks
     for i in range(n):
-        print("#", end="")
-    print()
+        for j in range(n):
+            print("#", end="")
+        print()
 
 def get_height():
     while True:
