@@ -6,11 +6,28 @@ def main():
 
     # TODO: Check for command-line usage
 
-    # TODO: Read database file into a variable
-    
-    # TODO: Read DNA sequence file into a variable
+    # Read database file into a variable
+    people = []
+    with open(sys.argv[1]) as db_file:
+        reader = csv.DictReader(db_file)
+
+        # Save the STRs to a variable
+        strs = reader.fieldnames[1:]
+        #print(strs)
+
+        # Put each row of dictionary into the variable people
+        for row in reader:
+            people.append(row)
+        #print(people)
+
+    # Read DNA sequence file into a variable
+    with open(sys.argv[2]) as dna_file:
+        sequence = dna_file.read()
+    print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
+    for str in strs:
+        ... = longest_match(sequence, str)
 
     # TODO: Check database for matching profiles
 
@@ -43,11 +60,11 @@ def longest_match(sequence, subsequence):
             # If there is a match in the substring
             if sequence[start:end] == subsequence:
                 count += 1
-            
+
             # If there is no match in the substring
             else:
                 break
-        
+
         # Update most consecutive matches found
         longest_run = max(longest_run, count)
 
