@@ -10,7 +10,7 @@ if len(argv) < 2:
     exit(1)
 
 
-print("hello, ", end ="")
+print("hello, ", end="")
 # Print every name after argv[0] (which is the program name)
 for arg in argv[1:]:
     print(f"{arg} ", end="")
